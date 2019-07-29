@@ -13,8 +13,9 @@
     "rollup-plugin-node-resolve": "^5.1.0"
   },
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "prepare": "npm run build",
+    "build": "./node_modules/rollup/bin/rollup -c",
+    "dev": "./node_modules/rollup/bin/rollup rollup -c -w",
     "test": "node test/test.js",
     "pretest": "npm run build"
   },
